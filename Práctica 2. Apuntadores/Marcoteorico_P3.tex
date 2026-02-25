@@ -1,0 +1,167 @@
+\documentclass[letterpaper,12pt,oneside]{article}
+\usepackage[top=1in, left=1.25in, right=1.25in, bottom=1in]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{caption, subcaption} %figuras
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{imakeidx}
+
+\graphicspath{{./figs/}}
+\usepackage{setspace}
+
+\begin{document}
+%\frontmatter
+\begin{titlepage}
+		\setlength{\parindent}{0pt} \setlength{\parskip}{0pt}
+	
+		\begin{center}
+			\vfill 
+			
+			\begin{minipage}{\textwidth}
+				
+				\newcolumntype{V}{>{\centering\arraybackslash} m{.17\textwidth} }
+				\newcolumntype{C}{>{\centering\arraybackslash} m{.56\textwidth} }
+				
+				\begin{center}
+					\includegraphics[width=4.5cm]{UNAM_LOGO2.png}	
+				\end{center} 	
+				\begin{center}
+					\Huge\textbf{Universidad Nacional Autónoma de México}
+				\end{center} 
+				
+			\end{minipage}
+				
+			\vfill
+			
+			\begin{minipage}{0.7\textwidth}
+				\begin{center}
+					\large Ingeniería en ...
+				\end{center}
+			\end{minipage}
+			% 
+			\begin{center}
+				\vfill
+				\large Estructura de Datos y ALgoritmos I
+			\end{center}
+			
+			\begin{center}
+				\vspace*{1cm}
+				{\huge FORMATO DE REPORTE}\\
+				\vspace*{1cm}
+				
+				\begin{center}
+					ALUMNO: \\
+					\large 323197294
+				\end{center}
+				
+				\bigskip
+				
+				Grupo: \\
+				\#\\
+				Semestre: \\
+                2026-II
+			\end{center}
+			
+			\vfill
+			
+			\begin{center}
+				{México,CDMX. Febrero 2026}\\
+			\end{center}
+			\cleardoublepage
+		\end{center}
+	\end{titlepage}
+ 
+\tableofcontents
+\clearpage
+    
+%\mainmatter
+
+\section{Introducción}
+
+Este apartado debe abordar los siguientes puntos:
+
+\begin{itemize}
+    \item \textbf{Planteamiento del problema.} Se hace una descripción del problema a resolver.
+    \item \textbf{Motivación.} Se describe porqué es necesario dar solución al problema.
+    \item \textbf{Objetivos.} Lo que se se espera obtener de darle solución al problema.
+\end{itemize}
+
+\section{Marco Teórico}
+
+Compilar con en la terminal transforma código fuente en ejecutables binarios [1][2][3]. El comando básico gcc archivo.c crea un ejecutable a.out, mientras que gcc archivo.c -o programa permite nombrar el archivo de salida, realizando el proceso de preprocesamiento, compilación, ensamblaje y enlazado.  
+La ejecución de una aplicación CLI generada con gcc depende del sistema operativo, pero generalmente implica compilar el código fuente a un ejecutable y luego invocarlo desde la terminal [4].
+
+CLI o Command Line Interface, es una herramienta que permite interactuar con el sistema operativo, mediante comandos de texto. En el caso de los sistemas Linux, MacOS o bien PowerShell en Windows, los comandos de CLI nos permiten el poder manipular archivos y ejecutar los programas de una manera eficiente [5][6].
+
+En CLI, el comando “cd”, dado su significado “Change Directory”, es utilizado para cambiar de un directorio a otro de una forma más rápida posible [6]. Además, algunos de sus banderas de apoyo son:  
+cd -> regresa al directorio anterior  
+cd -> va al directorio personal del usuario  
+cd /ruta/del/directorio -> accede a una ruta específica  
+
+Por otro lado, ls es un comando de Linux que le permite al usuario hacer una lista de archivos o directorios desde CLI, mostrando su contenido en la línea de comandos [7]. Asimismo, sus banderas de apoyo son:  
+-l -> muestra información detallada de los archivos  
+-a -> muestra archivos ocultos  
+-h -> muestra tamaños legibles para el usuario  
+
+De igual manera, el comando de mover “mv” se utiliza para mover o renombrar directorios y archivos; sin embargo, este no crea una copia del archivo, sino que cambia su ubicación o nombre [8]. Entre algunas de sus banderas de apoyo se encuentran:  
+-i -> pide confirmación antes de sobrescribir  
+-v -> muestra el proceso realizado  
+
+Por su parte, Remove o rm se usa para borrar archivos o directorios completos de forma permanente [9], usando:  
+-r -> elimina directorios y su contenido  
+-f -> fuerza la eliminación sin confirmación  
+-i -> solicita confirmación antes de borrar  
+
+Asimismo, mkdir es el comando que nos permite crear nuevos directorios o carpetas, ayudando así a organizar estos de manera rápida [10], con ayuda de las banderas de apoyo:  
+-p -> crea directorios anidados  
+-v -> muestra el directorio creado  
+
+Además, al usar clear, se nos permite limpiar la pantalla de la terminal eliminando los textos previos [11].
+
+Finalmente, compilar con gcc en la terminal transforma código fuente en ejecutables binarios [1][2][3].
+
+\section{Desarrollo}
+
+Es la descripción de la implementación realizada en el lenguaje de programación, así como las pruebas realizadas para obtener los resultados. Es importante resaltar lo siguiente:
+
+\begin{itemize}
+    \item No se debe mostrar código, solo describir funciones o la aplicación de los conceptos teóricos.
+    \item Las pruebas es describir las entradas ingresadas y las salidas obtenidas.
+\end{itemize}
+
+\section{Resultados}
+
+Mediante capturas de pantalla y una breve descripción seguida de la captura se presentan los resultados finales de su aplicación.
+
+\section{Conclusiones}
+
+Se presenta un análisis de los resultados obtenidos, donde se destaca la importancia de la aplicación de los conceptos teóricos para resolver el problema. Es importante resaltar lo siguiente:
+
+\begin{itemize}
+    \item No es describir si les gustó la actividad o no.
+    \item No es decir que se obtuvo de la práctica.
+    \item No es describir lo que fue difícil.
+\end{itemize}
+
+\clearpage
+\section*{Referencias}
+
+\begin{itemize}
+    \item [1] L. Chaparro, “Cómo compilar código C con gcc,” \textit{Medium}, 2021.
+    \item [2] L. Chaparro, “Compilation Process with GCC and C Programs,” \textit{Medium}, 2021.
+    \item [3] Universidad de la República, “Compilador GCC,” 2019.
+    \item [4] YouTube, “Introducción al compilador GCC,” 2020.
+    \item [5] Amazon Web Services, “¿Qué es la AWS Command Line Interface?”, 2024.
+    \item [6] Arsys, “¿Qué es una CLI o interfaz de línea de comandos?”, 2023.
+    \item [7] freeCodeCamp, “El comando Linux ls,” 2023.
+    \item [8] GeeksforGeeks, “mv Command in Linux,” 2023.
+    \item [9] IONOS, “Comando rm de Linux,” 2023.
+    \item [10] IBM, “Creating directories with the mkdir command,” 2022.
+    \item [11] GeeksforGeeks, “clear Command in Linux,” 2023.
+\end{itemize}
+
+\end{document}
