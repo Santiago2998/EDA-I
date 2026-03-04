@@ -52,6 +52,34 @@ void cifrar(struct Vigenere *datos){
     datos->textCifrado[i] = '\0';
 }
 
+//Función para descifrar con criterio Vigenère
+void descifrar(struct Vigenere *datos){
+    int i, j = 0;
+
+    int lenTexto = strlen(datos->textCifrado);
+    int lenClave = strlen(datos->clave);
+
+    for (i = 0; i < lenTexto; i++){
+        char letraTexto = tolower(datos->textCifrado[i]);
+
+        int indiceTexto = obtenerIndice(letraTexto);
+
+        if (indiceTexto != -1){
+            char letraClave = tolower(datos->clave[j % lenClave]);
+            int indiceClave = obtenerIndice(letraClave);
+
+            int nuevoIndice = (indiceTexto - indiceClave + 27) % 27;
+
+            datos->textoOriginal[i] = alfabeto[nuevoIndice];
+
+            j++;
+        } else {
+            datos->textoOriginal[i] = datos->textCifrado[i];
+        }
+    }
+    datos->textoOriginal[i] = '\0';
+}
+
 int main(){
     struct Vigenere datos;
 
@@ -68,6 +96,22 @@ int main(){
     printf("\nTexto original: %s\n", datos.textoOriginal);
     printf("Clave: %s\n", datos.clave);
     printf("Texto Cifrado : %s\n", datos.textCifrado);
+
+    int opcion = 0;
+
+    printf("Decifrar Mensaje? (y = 1, n = 2)");
+    scanf("%d", &opcion);
+
+    if(opcion == 1){
+        printf("Texto Cifrado : %s\n", datos.textCifrado);
+        printf("Clave: %s\n", datos.clave);
+
+        descifrar(&datos);
+
+        printf("Texto Descifrado : %s\n", datos.textoOriginal);
+    } else {
+        printf("Cerrando Programa...");
+    }
 
     return 0;
 }
