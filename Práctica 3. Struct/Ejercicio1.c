@@ -99,16 +99,23 @@ int main(){
 
     int opcion = 0;
 
-    printf("Decifrar Mensaje? (y = 1, n = 2)");
+    printf("Decifrar Mensaje? (y = 1, n = 2)\n");
     scanf("%d", &opcion);
+    getchar();
 
     if(opcion == 1){
-        printf("Texto Cifrado : %s\n", datos.textCifrado);
-        printf("Clave: %s\n", datos.clave);
+        printf("------ Descifrador Vigenere --------\n");
+        printf("Ingrese el texto a descifrar: ");
+        fgets(datos.textCifrado, MAX, stdin);
+        datos.textCifrado[strcspn(datos.textCifrado, "\n")] = '\0';
+
+        printf("Ingrese la clave: ");
+        fgets(datos.clave, MAX, stdin);
+        datos.clave[strcspn(datos.clave, "\n")] = '\0';
 
         descifrar(&datos);
 
-        printf("Texto Descifrado : %s\n", datos.textoOriginal);
+        printf("\nTexto Descifrado: %s\n", datos.textoOriginal);
     } else {
         printf("Cerrando Programa...");
     }
