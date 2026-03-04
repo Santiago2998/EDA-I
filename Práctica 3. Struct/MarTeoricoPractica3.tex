@@ -1,0 +1,125 @@
+\documentclass[letterpaper,12pt,oneside]{article}
+\usepackage[top=1in, left=1.25in, right=1.25in, bottom=1in]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{caption, subcaption}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{imakeidx}
+\usepackage{setspace}
+\usepackage{url}
+
+\graphicspath{{./figs/}}
+
+\begin{document}
+
+\begin{titlepage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\begin{center}
+\vfill
+
+\includegraphics[width=4.5cm]{UNAM_LOGO2.png}
+
+\vspace{0.5cm}
+
+{\Huge\textbf{Universidad Nacional Autónoma de México}}
+
+\vfill
+
+{\large Ingeniería en ...}
+
+\vfill
+
+{\large Estructura De Datos Y Algoritmos}
+
+\vspace{1cm}
+
+{\huge FORMATO DE REPORTE}
+
+\vspace{1cm}
+
+ALUMNO: \\
+\large 323197294
+
+\bigskip
+
+Grupo: \\
+\#
+
+Semestre: \\
+2026-II
+
+\vfill
+
+México,CDMX.Marzo 2026
+
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+
+\section{Introducción}
+
+Este apartado debe abordar los siguientes puntos:
+
+\begin{itemize}
+\item \textbf{Planteamiento del problema.} Se hace una descripción del problema a resolver.
+\item \textbf{Motivación.} Se describe porqué es necesario dar solución al problema.
+\item \textbf{Objetivos.} Lo que se se espera obtener de darle solución al problema.
+\end{itemize}
+
+\section{Marco Teórico}
+
+Derivada de la palabra griega "kryptos", que significa "oculto", la criptografía se traduce literalmente como "escritura oculta". Con base en esto, la criptografía se entiende como la práctica de desarrollar y utilizar algoritmos codificados para proteger y ocultar la información transmitida, de manera que solo pueda ser leída por quienes tengan permiso y la capacidad de descifrarla [1]. En consecuencia, la criptografía utiliza algoritmos y códigos para proteger la información y asegurar su confidencialidad [2].
+
+Por su parte, el cifrado es el proceso de traducir datos de texto sin formato (texto no cifrado) en algo que parece aleatorio y sin sentido, conocido como texto cifrado. De manera complementaria, el descifrado es el proceso que permite convertir el texto cifrado nuevamente en texto no cifrado [2].
+
+Entre los métodos de cifrado más conocidos, se encuentra el cifrado César, el cual consiste en que cada letra original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante en el alfabeto [3]. De forma más compleja, el cifrado Vigenère es un método de cifrado polialfabético por sustitución que utiliza una palabra clave para desplazar letras del texto plano basándose en la tabla de Vigenère, una matriz de 26×26 que repite el abecedario [5]. Gracias a esto, cada letra del mensaje se cifra con una letra diferente de la clave, lo que lo hace más seguro que el cifrado César [6].
+
+Dentro de esta tabla, los 26 posibles cifrados César están representados, ya que cada fila muestra el alfabeto con una letra más de desplazamiento que la fila anterior. Del mismo modo, la letra clave se muestra al principio de cada fila, mientras que el resto de la fila presenta las letras de la A a la Z. Sin embargo, aunque se muestran 26 filas de claves, el codificador solo utilizará tantas filas como letras únicas tenga la cadena de claves.
+
+Cabe destacar que una de las ventajas del cifrado Vigenère es que no es susceptible al análisis de frecuencia, debido a que el cifrado rota a través de diferentes desplazamientos, por lo que una misma letra del texto plano no siempre se cifra con la misma letra en el texto cifrado [6]. Aun así, su principal debilidad se encuentra en la naturaleza repetitiva de su clave. Por esta razón, si un criptoanalista logra identificar la longitud de la clave, el texto cifrado puede interpretarse como un conjunto de cifrados César entrelazados que pueden descifrarse con relativa facilidad.
+
+Finalmente, la implementación en C de los cifrados César y Vigenère implica manipular caracteres ASCII para desplazar letras. En primer lugar, el cifrado César utiliza un desplazamiento fijo (char + clave) % 26. En cambio, el cifrado Vigenère utiliza una clave de palabra, desplazando cada letra según el valor correspondiente de la palabra clave (char + clave[i]) % 26, repitiendo la clave cuando sea necesario.
+
+\section{Desarrollo}
+
+Es la descripción de la implementación realizada en el lenguaje de programación, así como las pruebas realizadas para obtener los resultados.
+
+\section{Resultados}
+
+Mediante capturas de pantalla y una breve descripción seguida de la captura se presentan los resultados finales de su aplicación.
+
+\section{Conclusiones}
+
+Se presenta un análisis de los resultados obtenidos.
+
+\begin{thebibliography}{9}
+
+\bibitem{1}
+IBM, ``What is Cryptography?,'' 2024. [En línea]. Disponible en: \url{https://www.ibm.com/mx-es/think/topics/cryptography}. [Accedido: 3 mar. 2026].
+
+\bibitem{2}
+Microsoft, ``Data Encryption and Decryption,'' 2024. [En línea]. Disponible en: \url{https://learn.microsoft.com/es-es/windows/win32/seccrypto/data-encryption-and-decryption}. [Accedido: 3 mar. 2026].
+
+\bibitem{3}
+Splunk, ``Caesar Cipher Explained,'' 2024. [En línea]. Disponible en: \url{https://www.splunk.com/en_us/blog/learn/caesar-cipher.html}. [Accedido: 3 mar. 2026].
+
+\bibitem{4}
+CiberTRS, ``Código César: cifrado sencillo pero eficaz,'' 2023. [En línea]. Disponible en: \url{https://cibertrs.com/codigo-cesar-cifrado-sencillo-pero-eficaz/}. [Accedido: 3 mar. 2026].
+
+\bibitem{5}
+Wikipedia, ``Cifrado de Vigenère,'' 2025. [En línea]. Disponible en: \url{https://es.wikipedia.org/wiki/Cifrado_de_Vigen%C3%A8re}. [Accedido: 3 mar. 2026].
+
+\bibitem{6}
+Brilliant, ``Vigenère Cipher,'' 2024. [En línea]. Disponible en: \url{https://brilliant.org/wiki/vigenere-cipher/}. [Accedido: 3 mar. 2026].
+
+\end{thebibliography}
+
+\end{document}
