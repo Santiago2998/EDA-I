@@ -1,0 +1,128 @@
+
+\documentclass[letterpaper,12pt,oneside]{article}
+\usepackage[top=1in, left=1.25in, right=1.25in, bottom=1in]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{caption, subcaption}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{imakeidx}
+
+\graphicspath{{./figs/}}
+\usepackage{setspace}
+
+\begin{document}
+
+\begin{titlepage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\begin{center}
+\vfill 
+
+\begin{minipage}{\textwidth}
+
+\newcolumntype{V}{>{\centering\arraybackslash} m{.17\textwidth}}
+\newcolumntype{C}{>{\centering\arraybackslash} m{.56\textwidth}}
+
+\begin{center}
+\includegraphics[width=4.5cm]{UNAM_LOGO2.png}
+\end{center}
+
+\begin{center}
+\Huge\textbf{Universidad Nacional Autónoma de México}
+\end{center}
+
+\end{minipage}
+
+\vfill
+
+\begin{minipage}{0.7\textwidth}
+\begin{center}
+\large Ingeniería en ...
+\end{center}
+\end{minipage}
+
+\begin{center}
+\vfill
+\large Estructura de Datos y ALGORITMOS 1
+\end{center}
+
+\begin{center}
+\vspace*{1cm}
+{\huge FORMATO DE REPORTE}\\
+\vspace*{1cm}
+
+ALUMNO: \\
+\large 323197294
+
+\bigskip
+
+Grupo: \\
+\#\\
+
+Semestre: \\
+2026-II
+\end{center}
+
+\vfill
+
+\begin{center}
+México, CDMX. Marzo 2026
+\end{center}
+
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+
+\section{Introducción}
+
+Este apartado debe abordar los siguientes puntos:
+
+\begin{itemize}
+\item \textbf{Planteamiento del problema.} Se hace una descripción del problema a resolver.
+\item \textbf{Motivación.} Se describe porqué es necesario dar solución al problema.
+\item \textbf{Objetivos.} Lo que se se espera obtener de darle solución al problema.
+\end{itemize}
+
+\section{Marco Teórico}
+
+La asignación dinámica de memoria en C permite reservar y liberar espacio en el heap en bloques de memoria en tiempo de ejecución, adaptándose al número de elementos que el programa necesite manejar. Se trabaja mediante punteros, y requiere incluir la librería #include <stdlib.h> [1]. Las funciones usadas en la memoria dinámica son malloc, calloc, realloc y free. La funcion malloc(size\_t size): Reserva un bloque de memoria no inicializada. Devuelve un puntero tipo void* o NULL si falla. La funcion calloc(size\_t num, size\_t size): Reserva memoria para un arreglo y la inicializa a cero; realloc(void *ptr, size\_t size): Cambia el tamaño de un bloque de memoria ya reservado, y la función free(void *ptr): Libera el bloque de memoria apuntado por ptr, devolviéndolo al heap [2].
+
+La memoria de acceso aleatorio (RAM) es un tipo de memoria informática que almacena datos temporalmente. Al apagar el ordenador, los datos de la RAM desaparecen, a diferencia de los del disco duro, que permanecen guardados. La RAM ayuda al ordenador a ejecutar programas y procesar la información con mayor rapidez. Esto es similar a cómo la memoria del cerebro nos ayuda a recordar cosas. En este artículo, hablaremos más sobre la RAM y sus diferentes tipos [3].
+
+En programación, la memoria dinámica se relaciona con la RAM, ya que consiste en reservar y liberar espacios de esta memoria durante la ejecución de un programa según sea necesario. Esto permite que los programas puedan manejar diferentes cantidades de datos sin definir desde el inicio el espacio de memoria que utilizarán [4].
+
+\section{Desarrollo}
+
+Es la descripción de la implementación realizada en el lenguaje de programación, así como las pruebas realizadas para obtener los resultados. Es importante resaltar lo siguiente:
+
+\begin{itemize}
+\item No se debe mostrar código, solo describir funciones o la aplicación de los conceptos teóricos.
+\item Las pruebas es describir las entradas ingresadas y las salidas obtenidas.
+\end{itemize}
+
+\section{Resultados}
+
+Mediante capturas de pantalla y una breve descripción seguida de la captura se presentan los resultados finales de su aplicación.
+
+\section{Conclusiones}
+
+Se presenta un análisis de los resultados obtenidos, donde se destaca la importancia de la aplicación de los conceptos teóricos para resolver el problema.
+
+\section*{Referencias}
+
+[1] New Line, “Memoria dinámica en C - malloc, calloc y realloc,” YouTube, 28 jun. 2023. [En línea]. Disponible en: https://www.youtube.com/watch?v=zp2O698ra8c [Accedido: 11 mar. 2026].
+
+[2] “Programación en C con memoria dinámica,” Programación II. [En línea]. Disponible en: https://sites.google.com/site/programacioniiuno/temario/unidad-1---manejo-de-memoria-dinmica/programacin-en-c-con-memoria-dinmica [Accedido: 11 mar. 2026].
+
+[3] GeeksforGeeks, “Random Access Memory (RAM).” [En línea]. Disponible en: https://www.geeksforgeeks.org/computer-science-fundamentals/random-access-memory-ram/ [Accedido: 11 mar. 2026].
+
+[4] “Curso de C++ – Memoria dinámica,” YouTube. [En línea]. Disponible en: https://www.youtube.com/watch?v=LTmv8mjeLDc [Accedido: 11 mar. 2026].
+
+\end{document}
