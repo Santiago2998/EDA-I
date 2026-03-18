@@ -1,0 +1,156 @@
+\documentclass[letterpaper,12pt,oneside]{article}
+\usepackage[top=1in, left=1.25in, right=1.25in, bottom=1in]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{caption, subcaption}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{imakeidx}
+
+\graphicspath{{./figs/}}
+\usepackage{setspace}
+
+\begin{document}
+
+\begin{titlepage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\begin{center}
+\vfill 
+
+\begin{minipage}{\textwidth}
+
+\newcolumntype{V}{>{\centering\arraybackslash} m{.17\textwidth}}
+\newcolumntype{C}{>{\centering\arraybackslash} m{.56\textwidth}}
+
+\begin{center}
+\includegraphics[width=4.5cm]{UNAM_LOGO2.png}
+\end{center}
+
+\begin{center}
+\Huge\textbf{Universidad Nacional Autónoma de México}
+\end{center}
+
+\end{minipage}
+
+\vfill
+
+\begin{minipage}{0.7\textwidth}
+\begin{center}
+\large Ingeniería en ...
+\end{center}
+\end{minipage}
+
+\begin{center}
+\vfill
+\large Estructura de Datos y ALGORITMOS 1
+\end{center}
+
+\begin{center}
+\vspace*{1cm}
+{\huge FORMATO DE REPORTE}\\
+\vspace*{1cm}
+
+ALUMNO: \\
+\large 323197294
+
+\bigskip
+
+Grupo: \\
+\#\\
+
+Semestre: \\
+2026-II
+\end{center}
+
+\vfill
+
+\begin{center}
+México, CDMX. Marzo 2026
+\end{center}
+
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+
+\section{Introducción}
+
+Este apartado debe abordar los siguientes puntos:
+
+\begin{itemize}
+\item \textbf{Planteamiento del problema.} Se hace una descripción del problema a resolver.
+\item \textbf{Motivación.} Se describe porqué es necesario dar solución al problema.
+\item \textbf{Objetivos.} Lo que se se espera obtener de darle solución al problema.
+\end{itemize}
+
+\section{Marco Teórico}
+
+En este proyecto se emplea la memoria dinámica, la cual permite reservar espacio en memoria durante la ejecución del programa mediante funciones como “malloc” y liberarla posteriormente con “free”. Este tipo de memoria es fundamental cuando la cantidad de datos no es fija, como en el caso del carrito de compras, cuyo tamaño depende del número de productos que el usuario decida ingresar. Su uso permite optimizar recursos y adaptar el programa a diferentes necesidades [1].
+
+Asimismo, se utilizan struct, las cuales permiten definir tipos de datos compuestos que agrupan diferentes variables bajo un mismo nombre. En este caso, se define una estructura llamada Productos que contiene atributos como el identificador, el precio y el nombre. Esto facilita la organización de la información y permite manejar cada producto como una unidad lógica dentro del programa [2].
+
+Por otro lado, se implementan arreglos dinámicos mediante punteros, donde un puntero apunta a un bloque de memoria que almacena múltiples elementos del tipo Productos. Esto permite acceder a los datos mediante índices, de forma similar a un arreglo tradicional, pero con la ventaja de que su tamaño se define en tiempo de ejecución, lo cual aporta flexibilidad al programa [3].
+
+Además, se emplea el manejo de cadenas de caracteres, utilizando funciones como “fgets” para la lectura de texto y strcspn para eliminar caracteres no deseados, como el salto de línea. Esto es importante para asegurar que los datos ingresados por el usuario se almacenen correctamente y puedan ser mostrados sin errores [4].
+
+Finalmente, el programa hace uso del uso de funciones, lo cual permite dividir el código en diferentes módulos, como el registro de productos, la visualización del carrito y la generación del ticket. Esta organización mejora la legibilidad, facilita el mantenimiento del código y permite reutilizar funciones en distintas partes del programa [5].
+
+\section{Desarrollo}
+
+Es la descripción de la implementación realizada en el lenguaje de programación, así como las pruebas realizadas para obtener los resultados. Es importante resaltar lo siguiente:
+
+\begin{itemize}
+\item No se debe mostrar código, solo describir funciones o la aplicación de los conceptos teóricos.
+\item Las pruebas es describir las entradas ingresadas y las salidas obtenidas.
+\end{itemize}
+
+\section{Resultados}
+
+Mediante capturas de pantalla y una breve descripción seguida de la captura se presentan los resultados finales de su aplicación.
+
+\section{Conclusiones}
+
+Se presenta un análisis de los resultados obtenidos, donde se destaca la importancia de la aplicación de los conceptos teóricos para resolver el problema.
+
+\section*{Referencias}
+
+\noindent
+\hangindent=2em
+\hangafter=1
+[1] Programación en C, “Memoria dinámica en C,” [En línea]. Disponible en: https://www.programacionenc.net/index.php?option=com_content&view=article&id=150&Itemid=141. [Accedido: 17 mar 2026].
+
+\medskip
+
+\noindent
+\hangindent=2em
+\hangafter=1
+[2] Tutorialspoint, “Estructuras en C,” [En línea]. Disponible en: https://www.tutorialspoint.com/cprogramming/c_structures.htm. [Accedido: 17 mar 2026].
+
+\medskip
+
+\noindent
+\hangindent=2em
+\hangafter=1
+[3] Lenguaje C, “Arreglos dinámicos en C,” [En línea]. Disponible en: https://lenguajec.com/c/arreglos-dinamicos-en-c/. [Accedido: 17 mar 2026].
+
+\medskip
+
+\noindent
+\hangindent=2em
+\hangafter=1
+[4] Programiz, “Cadenas en C,” [En línea]. Disponible en: https://www.programiz.com/c-programming/c-strings. [Accedido: 17 mar 2026].
+
+\medskip
+
+\noindent
+\hangindent=2em
+\hangafter=1
+[5] Programiz, “Funciones en C,” [En línea]. Disponible en: https://www.programiz.com/c-programming/c-functions. [Accedido: 17 mar 2026].
+
+\end{document}
