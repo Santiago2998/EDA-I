@@ -1,0 +1,147 @@
+\documentclass[letterpaper,12pt,oneside]{article}
+\usepackage[top=1in, left=1.25in, right=1.25in, bottom=1in]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{caption, subcaption}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{imakeidx}
+\usepackage{url} % <-- agregado
+
+\graphicspath{{./figs/}}
+\usepackage{setspace}
+
+\begin{document}
+
+\begin{titlepage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\begin{center}
+\vfill 
+
+\begin{minipage}{\textwidth}
+
+\newcolumntype{V}{>{\centering\arraybackslash} m{.17\textwidth}}
+\newcolumntype{C}{>{\centering\arraybackslash} m{.56\textwidth}}
+
+\begin{center}
+\includegraphics[width=4.5cm]{UNAM_LOGO2.png}
+\end{center}
+
+\begin{center}
+\Huge\textbf{Universidad Nacional Autónoma de México}
+\end{center}
+
+\end{minipage}
+
+\vfill
+
+\begin{minipage}{0.7\textwidth}
+\begin{center}
+\large Ingeniería en ...
+\end{center}
+\end{minipage}
+
+\begin{center}
+\vfill
+\large Estructura de Datos y ALGORITMOS 1
+\end{center}
+
+\begin{center}
+\vspace*{1cm}
+{\huge FORMATO DE REPORTE}\\
+\vspace*{1cm}
+
+ALUMNO: \\
+\large 323197294
+
+\bigskip
+
+Grupo: \\
+\#\\
+
+Semestre: \\
+2026-II
+\end{center}
+
+\vfill
+
+\begin{center}
+México, CDMX. Marzo 2026
+\end{center}
+
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+
+\section{Introducción}
+
+Este apartado debe abordar los siguientes puntos:
+
+\begin{itemize}
+\item \textbf{Planteamiento del problema.} Se hace una descripción del problema a resolver.
+\item \textbf{Motivación.} Se describe porqué es necesario dar solución al problema.
+\item \textbf{Objetivos.} Lo que se se espera obtener de darle solución al problema.
+\end{itemize}
+
+\section{Marco Teórico}
+
+Los palíndromos son palabras o frases que se leen igual de izquierda a derecha y de derecha a izquierda.Para esto su formación, se ignoran los espacios, acentos, signos de puntuación creando así lingüística curiosa.[1]
+Este concepto es importante porque permite aplicar estructuras de datos para comparar el orden normal e invertido de una cadena.[1]
+Las pilas (stacks) y colas (queues) son estructuras de datos lineales con restricciones de acceso.[2] Las pilas siguen el principio LIFO (Last in First Out ), ideales para deshacer acciones o recursión, usando push (insertar) y pop(eliminar).
+Las colas siguen FIFO (First In First Out ), ideales para gestión de tareas, usando enqueue (encolar) y dequeue(desencolar).[2]
+En este contexto, el uso conjunto de una pila y una cola permite comparar una secuencia de caracteres en orden inverso y en orden original. Esto facilita la verificación de si una palabra es un palíndromo, ya que se pueden contrastar los elementos extraídos de ambas estructuras de manera secuencial.[2]
+En el lenguaje C, también es importante el uso de bibliotecas estándar como string.h y stdlib.h, las cuales proporcionan funciones útiles para la manipulación de cadenas y la gestión de memoria.[3] Por ejemplo, la biblioteca string.h permite trabajar con cadenas mediante funciones como strlen, que se utiliza para obtener la longitud de una palabra, mientras que stdlib.h incluye funciones como malloc, que permite reservar memoria dinámicamente durante la ejecución del programa.[3] Estas herramientas son fundamentales para desarrollar programas más eficientes, organizados y funcionales.
+
+\section{Desarrollo}
+
+Es la descripción de la implementación realizada en el lenguaje de programación, así como las pruebas realizadas para obtener los resultados. Es importante resaltar lo siguiente:
+
+\begin{itemize}
+\item No se debe mostrar código, solo describir funciones o la aplicación de los conceptos teóricos.
+\item Las pruebas es describir las entradas ingresadas y las salidas obtenidas.
+\end{itemize}
+
+\section{Resultados}
+
+Mediante capturas de pantalla y una breve descripción seguida de la captura se presentan los resultados finales de su aplicación.
+
+\section{Conclusiones}
+
+Se presenta un análisis de los resultados obtenidos, donde se destaca la importancia de la aplicación de los conceptos teóricos para resolver el problema.
+
+\section*{Referencias}
+
+\noindent
+\hangindent=2em
+\hangafter=1
+[1] Profa. Kempis, “Palíndromos,” YouTube, 12-jun-2021. [En línea]. Disponible en: \url{https://www.youtube.com/watch?v=ZubUjoW1gq8}. [Accedido: 22-mar-2026].
+
+\medskip
+
+\noindent
+\hangindent=2em
+\hangafter=1
+[2] S. Zalimben, “Pilas y colas,” Szalimben Blog, [En línea]. Disp. en: \url{https://www.szalimben.com.py/blog/spanish/posts/stack-queue}. [Accedido: 22-mar-2026].
+
+\medskip
+
+\noindent
+\hangindent=2em
+\hangafter=1
+[3] Tutorialspoint, “Strings in C,” Tutorialspoint, [En línea]. Disp. en: \url{https://www.tutorialspoint.com/cprogramming/c_strings.htm}. [Accedido: 22-mar-2026].
+
+\medskip
+
+\noindent
+\hangindent=2em
+\hangafter=1
+[4] HackerRank, “Data Structures: Stacks and Queues,” YouTube, 27-sep-2016. [En línea]. Disponible en: \url{https://www.youtube.com/watch?v=wjI1WNcIntg}. [Accedido: 22-mar-2026].
+
+\end{document}
