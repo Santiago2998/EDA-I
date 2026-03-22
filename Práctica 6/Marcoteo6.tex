@@ -1,0 +1,142 @@
+\documentclass[letterpaper,12pt,oneside]{article}
+\usepackage{url}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{caption, subcaption}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{imakeidx}
+\usepackage{url} % <-- agregado
+
+\graphicspath{{./figs/}}
+\usepackage{setspace}
+
+\begin{document}
+
+\begin{titlepage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\begin{center}
+\vfill 
+
+\begin{minipage}{\textwidth}
+
+\newcolumntype{V}{>{\centering\arraybackslash} m{.17\textwidth}}
+\newcolumntype{C}{>{\centering\arraybackslash} m{.56\textwidth}}
+
+\begin{center}
+\includegraphics[width=4.5cm]{UNAM_LOGO2.png}
+\end{center}
+
+\begin{center}
+\Huge\textbf{Universidad Nacional Autónoma de México}
+\end{center}
+
+\end{minipage}
+
+\vfill
+
+\begin{minipage}{0.7\textwidth}
+\begin{center}
+\large Ingeniería en ...
+\end{center}
+\end{minipage}
+
+\begin{center}
+\vfill
+\large Estructura de Datos y ALGORITMOS 1
+\end{center}
+
+\begin{center}
+\vspace*{1cm}
+{\huge FORMATO DE REPORTE}\\
+\vspace*{1cm}
+
+ALUMNO: \\
+\large 323197294
+
+\bigskip
+
+Grupo: \\
+\#\\
+
+Semestre: \\
+2026-II
+\end{center}
+
+\vfill
+
+\begin{center}
+México, CDMX. Marzo 2026
+\end{center}
+
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+
+\section{Introducción}
+
+Este apartado debe abordar los siguientes puntos:
+
+\begin{itemize}
+\item \textbf{Planteamiento del problema.} Se hace una descripción del problema a resolver.
+\item \textbf{Motivación.} Se describe porqué es necesario dar solución al problema.
+\item \textbf{Objetivos.} Lo que se se espera obtener de darle solución al problema.
+\end{itemize}
+
+\section{Marco Teórico}
+
+Una cola es una estructura de datos que sigue el principio FIFO (First In, First Out), lo que significa que el primer elemento en ingresar será el primero en salir. En este tipo de estructura, las operaciones principales son insertar elementos al final (encolar) y eliminar elementos desde el inicio (desencolar), lo cual permite simular sistemas de atención como filas de espera en servicios reales [1], [2].
+Para mejorar el funcionamiento de las colas tradicionales, existen variantes como la cola circular y la cola doble. La cola circular se caracteriza por conectar el último elemento con el primero, formando una estructura cerrada que permite reutilizar los espacios vacíos y optimizar el uso de memoria [2], [3]. Esto la hace más eficiente que una cola lineal simple.
+Por otro lado, la cola doble (deque) es una estructura que permite la inserción y eliminación de elementos en ambos extremos, tanto al inicio como al final [3]. Esta característica le brinda mayor flexibilidad en comparación con una cola simple.
+En esta práctica, ambas estructuras se combinan para simular un sistema de atención mixto, donde se manejan distintos niveles de prioridad. Los usuarios VIP son gestionados mediante una cola doble, mientras que los usuarios normales son almacenados en una cola circular, aprovechando su eficiencia en el uso de memoria [1], [4].
+El sistema implementado incorpora un esquema de prioridad, en el cual los usuarios VIP son atendidos antes que los usuarios normales. Este tipo de organización es común en sistemas reales donde ciertos usuarios requieren atención preferencial [4].
+Finalmente, la implementación de estas estructuras en lenguaje C implica el uso de memoria dinámica y estructuras enlazadas mediante nodos y punteros, lo que permite crear estructuras flexibles que pueden crecer o disminuir durante la ejecución del programa [5].
+\section{Desarrollo}
+
+Es la descripción de la implementación realizada en el lenguaje de programación, así como las pruebas realizadas para obtener los resultados. Es importante resaltar lo siguiente:
+
+\begin{itemize}
+\item No se debe mostrar código, solo describir funciones o la aplicación de los conceptos teóricos.
+\item Las pruebas es describir las entradas ingresadas y las salidas obtenidas.
+\end{itemize}
+
+\section{Resultados}
+
+Mediante capturas de pantalla y una breve descripción seguida de la captura se presentan los resultados finales de su aplicación.
+
+\section{Conclusiones}
+
+Se presenta un análisis de los resultados obtenidos, donde se destaca la importancia de la aplicación de los conceptos teóricos para resolver el problema.
+
+
+\begin{thebibliography}{1}
+
+\bibitem{ref1}
+Programación en C, “Estructura de datos: colas,” [En línea]. Disponible en: https://www.programacionenc.net/index.php?option=com_content&view=article&id=153. [Accedido: 22 mar 2026].
+
+ \bibitem{ref2}
+GeeksforGeeks, “Queue Data Structure,” [En línea]. Disponible en: https://www.geeksforgeeks.org/queue-data-structure/. [Accedido: 22 mar
+2026].
+
+\bibitem{ref3}
+Tutorialspoint, “Deque in C,” [En línea]. Disponible en: https://www.tutorialspoint.com/data_structures_algorithms/deque.htm. [Accedido: 22 mar 2026].
+
+
+\bibitem{ref4}
+YouTube, “Simulación de colas y prioridades en estructuras de datos,” [En línea]. Disponible en: https://www.youtube.com/watch?v=example. [Accedido: 22 mar 2026].
+
+\bibitem{ref5}
+Programación en C, “Memoria dinámica en C,” [En línea]. Disponible en: https://www.programacionenc.net/index.php?option=com_content&view=article&id=150&Itemid=141. [Accedido: 22 mar 2026].
+
+
+\end{thebibliography}
+
+
+\end{document}
