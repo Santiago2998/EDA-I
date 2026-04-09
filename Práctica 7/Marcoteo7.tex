@@ -1,0 +1,148 @@
+\documentclass[letterpaper,12pt,oneside]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{caption, subcaption}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{imakeidx}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{setspace}
+
+\graphicspath{{./figs/}}
+
+\begin{document}
+
+\begin{titlepage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\begin{center}
+\vfill 
+
+\begin{minipage}{\textwidth}
+
+\newcolumntype{V}{>{\centering\arraybackslash} m{.17\textwidth}}
+\newcolumntype{C}{>{\centering\arraybackslash} m{.56\textwidth}}
+
+\begin{center}
+\includegraphics[width=4.5cm]{UNAM_LOGO2.png}
+\end{center}
+
+\begin{center}
+\Huge\textbf{Universidad Nacional Autónoma de México}
+\end{center}
+
+\end{minipage}
+
+\vfill
+
+\begin{minipage}{0.7\textwidth}
+\begin{center}
+\large Ingeniería en ...
+\end{center}
+\end{minipage}
+
+\begin{center}
+\vfill
+\large Estructura de Datos y ALGORITMOS 1
+\end{center}
+
+\begin{center}
+\vspace*{1cm}
+{\huge FORMATO DE REPORTE}\\
+\vspace*{1cm}
+
+ALUMNO: \\
+\large 323197294
+
+\bigskip
+
+Grupo: \\
+\#\\
+
+Semestre: \\
+2026-II
+\end{center}
+
+\vfill
+
+\begin{center}
+México, CDMX. Marzo 2026
+\end{center}
+
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+
+\section{Introducción}
+
+Este apartado debe abordar los siguientes puntos:
+
+\begin{itemize}
+\item \textbf{Planteamiento del problema.} Se hace una descripción del problema a resolver.
+\item \textbf{Motivación.} Se describe porqué es necesario dar solución al problema.
+\item \textbf{Objetivos.} Lo que se se espera obtener de darle solución al problema.
+\end{itemize}
+
+\section{Marco Teórico}
+
+Las estructuras de datos son fundamentales en la programación, ya que permiten organizar y almacenar información de manera eficiente para facilitar su manipulación dentro de los programas. Una de las estructuras más utilizadas para manejar datos dinámicos es la lista enlazada, la cual consiste en una colección de elementos llamados nodos que se encuentran conectados mediante enlaces o referencias. Cada nodo contiene un dato y un puntero que apunta al siguiente nodo de la estructura, lo que permite recorrer la lista y acceder a la información almacenada. A diferencia de los arreglos, las listas enlazadas no requieren que los elementos estén almacenados en posiciones consecutivas de memoria, lo que facilita la inserción y eliminación de elementos durante la ejecución del programa [1].
+
+El nodo es la unidad básica que compone una lista enlazada. Cada nodo está formado generalmente por dos partes: un campo donde se almacena la información o dato y un enlace que apunta al siguiente nodo de la lista. Gracias a esta estructura, los nodos pueden conectarse entre sí formando una cadena que permite recorrer la lista para realizar diversas operaciones. Este enfoque permite manejar estructuras dinámicas de datos, ya que los nodos pueden crearse o eliminarse según sea necesario sin reorganizar toda la memoria utilizada por el programa [2].
+
+Una variante importante de las listas enlazadas es la lista circular, en la cual el último nodo de la lista no apunta a un valor nulo, sino que vuelve a apuntar al primer nodo de la estructura. De esta forma se crea un ciclo continuo que permite recorrer la lista indefinidamente. Las listas circulares se utilizan comúnmente en aplicaciones donde los elementos deben recorrerse de manera repetitiva, como en simulaciones de turnos o reproductores de música donde al terminar una canción se puede continuar automáticamente con la siguiente [1].
+
+Dentro de las listas enlazadas existen diversas operaciones que permiten manipular los elementos almacenados. Una de las más importantes es la inserción, que consiste en agregar un nuevo nodo dentro de la estructura. Para realizar esta operación se debe crear el nuevo nodo y modificar los enlaces correspondientes para mantener la conexión correcta entre los elementos de la lista. Dependiendo de la implementación, la inserción puede realizarse al inicio de la lista, al final o en una posición específica [3].
+
+Otra operación fundamental es la búsqueda, que permite localizar un elemento dentro de la lista enlazada. Para llevar a cabo esta operación normalmente se recorre la lista nodo por nodo comparando la información almacenada hasta encontrar el elemento deseado o hasta recorrer todos los nodos disponibles. La búsqueda es necesaria para verificar la existencia de un elemento antes de realizar otras operaciones como la actualización o eliminación de datos [3].
+
+Finalmente, la eliminación es la operación que permite remover un nodo de la lista enlazada. Para eliminar un elemento es necesario modificar los enlaces de los nodos vecinos para que el nodo eliminado deje de formar parte de la estructura. Esta operación permite mantener actualizada la información almacenada y gestionar de manera eficiente la memoria utilizada por el programa, ya que el nodo eliminado puede liberarse después de que deja de ser necesario [4].
+
+\section{Desarrollo}
+
+Es la descripción de la implementación realizada en el lenguaje de programación, así como las pruebas realizadas para obtener los resultados. Es importante resaltar lo siguiente:
+
+\begin{itemize}
+\item No se debe mostrar código, solo describir funciones o la aplicación de los conceptos teóricos.
+\item Las pruebas es describir las entradas ingresadas y las salidas obtenidas.
+\end{itemize}
+
+\section{Resultados}
+
+Mediante capturas de pantalla y una breve descripción seguida de la captura se presentan los resultados finales de su aplicación.
+
+\section{Conclusiones}
+
+Se presenta un análisis de los resultados obtenidos, donde se destaca la importancia de la aplicación de los conceptos teóricos para resolver el problema.
+
+\begin{thebibliography}{4}
+
+\bibitem{ref1}
+Wikipedia, “Lista enlazada,” Wikipedia, la enciclopedia libre.  
+Disponible en: \url{https://es.wikipedia.org/wiki/Lista_enlazada}  
+(consultado: 8 de abril de 2026).
+
+\bibitem{ref2}
+O. Blancarte, “Estructuras de datos: listas ligadas,” Oscar Blancarte Blog, 24 de julio de 2014.  
+Disponible en: \url{https://www.oscarblancarteblog.com/2014/07/24/estructuras-de-datos-listas-ligadas/}  
+(consultado: 8 de abril de 2026).
+
+\bibitem{ref3}
+Learn Software, “Linked Lists – Data Structures,” Learn-Software.com.  
+Disponible en: \url{https://learn-software.com/programming/data-structures/linked-lists/}  
+(consultado: 8 de abril de 2026).
+
+\bibitem{ref4}
+CIDECAME, “Operaciones en las listas enlazadas,” Universidad Autónoma del Estado de Hidalgo.  
+Disponible en: \url{https://cidecame.uaeh.edu.mx/lcc/mapa/PROYECTO/libro9/operaciones_en_las_listas_enlazadas.html}  
+(consultado: 8 de abril de 2026).
+
+\end{thebibliography}
+
+\end{document}
