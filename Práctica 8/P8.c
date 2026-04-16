@@ -2,9 +2,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include <stdio.h>
-#include <stdlib.h>
-
 #define MAX 255
 
 struct nodoC {
@@ -32,16 +29,18 @@ struct nodoC *crearNodo(int nid, char ntitle[], char ndesc[]){
 void insertEnd(struct nodoC **cabeza, int nid, char ntitle[], char ndesc[]){
     struct nodoC *nuevo = crearNodo(nid, ntitle, ndesc);
     struct nodoC *ultimo;
+
     if (nuevo == NULL){
-        printf("no hay memoria suficiente para realizar el comando\n");
         return;
-    } //Caso lista vacía
+    }
+
     if (*cabeza == NULL){
         nuevo->sig = nuevo;
         nuevo->ant = nuevo;
         *cabeza = nuevo;
         return;
     }
+
     ultimo = (*cabeza)->ant;
 
     nuevo->sig = *cabeza;
@@ -50,15 +49,13 @@ void insertEnd(struct nodoC **cabeza, int nid, char ntitle[], char ndesc[]){
     ultimo->sig = nuevo;
     (*cabeza)->ant = nuevo;
 
-    printf("Anuncio Insertado");
+    printf("Anuncio insertado.\n");
 }
 
-// Función para buscar
 struct nodoC* buscarAnuncio(struct nodoC *cabeza, int idBuscado) {
     struct nodoC *actual;
 
     if (cabeza == NULL) {
-        printf("No hay anuncios.\n");
         return NULL;
     }
 
@@ -74,10 +71,8 @@ struct nodoC* buscarAnuncio(struct nodoC *cabeza, int idBuscado) {
     return NULL;
 }
 
-// Función para eliminar por valor
 void eliminar(struct nodoC **cabeza, int idEliminar) {
     struct nodoC *eliminarNodo;
-    struct nodoC *ultimo;
 
     if (*cabeza == NULL) {
         printf("La lista está vacía.\n");
@@ -91,7 +86,6 @@ void eliminar(struct nodoC **cabeza, int idEliminar) {
         return;
     }
 
-    // Caso de un solo nodo
     if (eliminarNodo->sig == eliminarNodo) {
         free(eliminarNodo);
         *cabeza = NULL;
@@ -99,26 +93,18 @@ void eliminar(struct nodoC **cabeza, int idEliminar) {
         return;
     }
 
-    // Reenlace de los vecinos
     eliminarNodo->ant->sig = eliminarNodo->sig;
     eliminarNodo->sig->ant = eliminarNodo->ant;
 
-    // Caso de eliminar la cabeza
     if (eliminarNodo == *cabeza) {
         *cabeza = eliminarNodo->sig;
     }
 
-    ultimo = (*cabeza)->ant;
-    ultimo->sig = *cabeza;
-    (*cabeza)->ant = ultimo;
-
     free(eliminarNodo);
-    printf("Se eliminó el anuncio: %d.\n", idEliminar);
+    printf("Se eliminó el anuncio %d.\n", idEliminar);
 }
 
-void mostrarAnuncioActual(struct nodoC *head){
-    struct nodoC *actual = head;
-
+void mostrarAnuncioActual(struct nodoC *actual){
     if (actual == NULL){
         printf("No hay anuncios.\n");
         return;
@@ -130,108 +116,49 @@ void mostrarAnuncioActual(struct nodoC *head){
     printf("Descripcion: %s\n", actual->desc);
 }
 
-// Función para mostrar lista mediante sucesores
-void siguienteAnuncio(struct nodoC *cabeza) {
-    struct nodoC *actual = cabeza;
-
-    if (cabeza == NULL) {
-        printf("No hay anuncios.\n");
-        return;
-    }
-
-    actual = actual->sig;
-    mostrarAnuncioActual(actual);
-}
-
-// Función para mostrar lista mediante antecesores
-void anteriorAnuncio(struct nodoC *cabeza) {
-    struct nodoC *actual;
-
-    if (cabeza == NULL) {
-        printf("Lista hacia atrás: vacía\n");
-        return;
-    }
-
-    actual = cabeza->ant;
-    mostrarAnuncioActual(actual);
-}
-
-void mostrarLista(struct nodoC *head){
-    struct nodoC *actual;
-
-    if (head == NULL){
-        printf("La lista está vacía.\n");
-        return;
-    }
-
-    actual = head;
-    do{
-        mostrarAnuncioActual(actual);
-        actual = actual->sig;
-
-    } while (actual != head);
-
-}
-
-// Función para liberar memoria
-void liberarLista(struct nodoC **cabeza) {
-    struct nodoC *actual;
-    struct nodoC *temp;
-
-    if (*cabeza == NULL) {
-        return;
-    }
-
-    actual = (*cabeza)->sig;
-
-    while (actual != *cabeza) {
-        temp = actual->sig;
-        free(actual);
-        actual = temp;
-    }
-
-    free(*cabeza);
-    *cabeza = NULL;
-}
-
 int main() {
     struct nodoC *anuncios = NULL;
-    struct nodoC *encontrado;
+    struct nodoC *actual = NULL;
     int opcion;
 
-    do
-    {
+    do {
         printf("\n1. Ingresar Anuncio.\n");
         printf("2. Mostrar Anuncio Actual.\n");
         printf("3. Siguiente Anuncio.\n");
         printf("4. Anterior Anuncio.\n");
         printf("5. Eliminar Anuncio.\n");
         printf("6. Salir.\n");
-        printf("Selecciona una opcion.\n");
+        printf("Selecciona una opcion: ");
         scanf("%d", &opcion);
-        getchar();
 
         switch(opcion) {
         case 1: 
             insertEnd(&anuncios, 1, "Loreal", "Shampoo, maquillaje, etc.");
             insertEnd(&anuncios, 2, "Sabritas", "Ruffles, Doritos, Takis");
+
+            if (actual == NULL)
+                actual = anuncios;
         break;
 
         case 2: 
-            mostrarAnuncioActual(anuncios);
+            mostrarAnuncioActual(actual);
         break;
 
         case 3:
-            siguienteAnuncio(anuncios);
+            if (actual != NULL)
+                actual = actual->sig;
+            mostrarAnuncioActual(actual);
         break;
 
         case 4: 
-            anteriorAnuncio(anuncios);
-            mostrarAnuncioActual(anuncios);
+            if (actual != NULL)
+                actual = actual->ant;
+            mostrarAnuncioActual(actual);
         break;
 
         case 5: 
             eliminar(&anuncios, 1);
+            actual = anuncios;
         break;
         
         case 6: 
@@ -239,9 +166,9 @@ int main() {
         break;
         
         default:
-            printf("error");
+            printf("Opcion invalida.\n");
         break;
-    }
+        }
 
     } while (opcion != 6);
     
