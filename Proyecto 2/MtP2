@@ -1,0 +1,153 @@
+\documentclass[letterpaper,12pt,oneside]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-nodecimaldot,es-tabla]{babel}
+\usepackage{caption, subcaption}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{imakeidx}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{setspace}
+
+\graphicspath{{./figs/}}
+
+\begin{document}
+
+\begin{titlepage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\begin{center}
+\vfill 
+
+\begin{minipage}{\textwidth}
+
+\newcolumntype{V}{>{\centering\arraybackslash} m{.17\textwidth}}
+\newcolumntype{C}{>{\centering\arraybackslash} m{.56\textwidth}}
+
+\begin{center}
+\includegraphics[width=4.5cm]{UNAM_LOGO2.png}
+\end{center}
+
+\begin{center}
+\Huge\textbf{Universidad Nacional Autónoma de México}
+\end{center}
+
+\end{minipage}
+
+\vfill
+
+\begin{minipage}{0.7\textwidth}
+\begin{center}
+\large Ingeniería en ...
+\end{center}
+\end{minipage}
+
+\begin{center}
+\vfill
+\large Estructura de Datos y ALGORITMOS 1
+\end{center}
+
+\begin{center}
+\vspace*{1cm}
+{\huge FORMATO DE REPORTE}\\
+\vspace*{1cm}
+
+ALUMNO: \\
+\large 323197294
+
+\bigskip
+
+Grupo: \\
+\#\\
+
+Semestre: \\
+2026-II
+\end{center}
+
+\vfill
+
+\begin{center}
+México, CDMX. Marzo 2026
+\end{center}
+
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+
+\section{Introducción}
+
+Este apartado debe abordar los siguientes puntos:
+
+\begin{itemize}
+\item \textbf{Planteamiento del problema.} Se hace una descripción del problema a resolver.
+\item \textbf{Motivación.} Se describe porqué es necesario dar solución al problema.
+\item \textbf{Objetivos.} Lo que se se espera obtener de darle solución al problema.
+\end{itemize}
+
+\section{Marco Teórico}
+Las estructuras de datos son fundamentales en la programación, ya que permiten organizar y almacenar información de manera eficiente para facilitar su acceso y manipulación. Estas estructuras se basan en la capacidad de una computadora para guardar y recuperar datos en memoria, adaptándose a distintos tipos de aplicaciones [1].
+
+En el lenguaje C, una de las formas más comunes de representar información compleja es mediante el uso de estructuras (struct), las cuales permiten agrupar diferentes tipos de datos bajo una sola entidad. Esto resulta especialmente útil en aplicaciones como un carrito de compras, donde cada producto puede tener atributos como nombre, identificador y precio.
+
+Un concepto clave en este tipo de proyectos es la memoria dinámica, que permite reservar espacio en memoria durante la ejecución del programa. A diferencia de las estructuras estáticas, la memoria dinámica ofrece flexibilidad, ya que el tamaño de los datos puede cambiar según las necesidades del usuario [4]. Esto es esencial en un carrito de compras, donde no se conoce de antemano cuántos productos se almacenarán.
+
+Para implementar esta dinámica, se utilizan listas enlazadas, que son estructuras de datos lineales formadas por nodos. Cada nodo contiene datos y una referencia (puntero) al siguiente nodo, lo que permite almacenar elementos de forma no contigua en memoria [2]. Esta característica facilita la inserción y eliminación de elementos sin necesidad de reorganizar toda la estructura.
+
+Las listas enlazadas pueden ser de varios tipos. Las listas simples tienen nodos que apuntan únicamente al siguiente elemento. Las listas doblemente enlazadas tienen nodos que apuntan tanto al siguiente como al anterior, lo que permite recorrer la estructura en ambos sentidos [3].
+
+Además, las listas enlazadas son consideradas estructuras dinámicas porque pueden crecer o disminuir según sea necesario, lo que las hace ideales cuando no se conoce la cantidad de datos a manejar [6]. Estas estructuras permiten realizar operaciones fundamentales como inserción, eliminación y recorrido de elementos de manera eficiente.
+
+Otro elemento importante en este proyecto es el uso de punteros, que son variables que almacenan direcciones de memoria. Los punteros permiten enlazar los nodos entre sí, formando la estructura de la lista. Sin el uso correcto de punteros, no sería posible implementar estructuras dinámicas como las listas enlazadas.
+
+Finalmente, el desarrollo de una aplicación CLI implica la interacción directa con el usuario mediante un menú de opciones. Este tipo de interfaz permite ejecutar diferentes operaciones, como agregar, eliminar o mostrar productos, simulando el comportamiento de un sistema real. Al finalizar la ejecución, se genera un ticket de compra, el cual implica recorrer la estructura de datos y calcular el total de los productos.
+\section{Desarrollo}
+
+Es la descripción de la implementación realizada en el lenguaje de programación, así como las pruebas realizadas para obtener los resultados. Es importante resaltar lo siguiente:
+
+\begin{itemize}
+\item No se debe mostrar código, solo describir funciones o la aplicación de los conceptos teóricos.
+\item Las pruebas es describir las entradas ingresadas y las salidas obtenidas.
+\end{itemize}
+
+\section{Resultados}
+
+Mediante capturas de pantalla y una breve descripción seguida de la captura se presentan los resultados finales de su aplicación.
+
+\section{Conclusiones}
+
+Se presenta un análisis de los resultados obtenidos, donde se destaca la importancia de la aplicación de los conceptos teóricos para resolver el problema.
+
+\begin{thebibliography}{6}
+\bibitem{ref1}
+
+Estructura de datos, Wikipedia, la enciclopedia libre. [En línea]. Disponible en: https://es.wikipedia.org/wiki/Estructura_de_datos. [Accedido: 22-abr-2026].
+
+\bibitem{ref2}
+
+Lista enlazada, Wikipedia, la enciclopedia libre. [En línea]. Disponible en: https://es.wikipedia.org/wiki/Lista_enlazada. [Accedido: 22-abr-2026].
+
+\bibitem{ref3}
+
+Lista doblemente enlazada, Wikipedia, la enciclopedia libre. [En línea]. Disponible en: https://es.wikipedia.org/wiki/Lista_doblemente_enlazada. [Accedido: 22-abr-2026].
+
+\bibitem{ref4}
+
+Fundamentos de algoritmos (memoria dinámica), SlideShare. [En línea]. Disponible en: https://es.slideshare.net/slideshow/fundamentos-de-algoritmos-bsico-intermedioppt/267050083. [Accedido: 22-abr-2026].
+
+\bibitem{ref5}
+
+Teoría de listas enlazadas, SlideShare. [En línea]. Disponible en: https://es.slideshare.net/slideshow/teoria-de-listas-10104932/10104932. [Accedido: 22-abr-2026].
+
+\bibitem{ref6}
+
+Análisis de un TDA con listas enlazadas, Studocu. [En línea]. Disponible en: https://www.studocu.com/es-mx/document/aliat-universidades/calculo/proyecto-parte-1-analisis-de-un-tda-con-listas-enlazadas-indi-2026/155030484. [Accedido: 22-abr-2026].
+
+\end{thebibliography}
+
+\end{document}
