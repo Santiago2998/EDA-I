@@ -1,0 +1,72 @@
+Python es un lenguaje de programación de alto nivel, interpretado y de
+propósito general, diseñado para ser fácil de leer y escribir gracias a
+su sintaxis clara y estructurada. Es ampliamente utilizado en diferentes
+áreas como el desarrollo de software, análisis de datos, automatización
+y aplicaciones científicas [1]. Una de sus principales características
+es que es dinámicamente tipado, lo que significa que no es necesario
+declarar el tipo de dato de una variable, ya que este se determina
+automáticamente en tiempo de ejecución [2].
+
+En el desarrollo de programas, las variables permiten almacenar
+información en memoria y pueden contener distintos tipos de datos como
+enteros, números decimales, cadenas de texto y valores booleanos. El
+correcto manejo de estos tipos es fundamental para evitar errores y
+garantizar el funcionamiento adecuado del programa [2]. Asimismo, Python
+permite realizar operaciones aritméticas básicas como suma, resta,
+multiplicación, división y potenciación, las cuales son esenciales para
+resolver problemas matemáticos y modelar situaciones reales [1].
+
+Para lograr la interacción con el usuario, se emplean mecanismos de
+entrada y salida de datos, los cuales permiten recibir información y
+mostrar resultados. Este proceso es fundamental en la construcción de
+programas dinámicos e interactivos [2]. Además, Python cuenta con
+bibliotecas especializadas que amplían sus capacidades, como las
+funciones matemáticas que incluyen operaciones trigonométricas tales
+como seno, coseno y tangente, ampliamente utilizadas en áreas
+científicas e ingenieriles [3].
+
+Otra funcionalidad importante es el manejo de archivos, el cual permite
+crear, leer y modificar información almacenada de manera permanente en
+dispositivos de almacenamiento. Esto resulta esencial para aplicaciones
+que requieren persistencia de datos [1]. De igual manera, las cadenas de
+texto son estructuras que permiten almacenar información textual y
+pueden manipularse mediante diversas operaciones como reemplazo de
+palabras, concatenación y manejo de texto multilínea, facilitando el
+procesamiento de información [2]. También es posible extraer partes
+específicas de una cadena mediante técnicas como el slicing, lo que
+permite trabajar con fragmentos de texto de manera eficiente [1].
+
+El formato de texto mediante f-strings representa una forma moderna y
+eficiente de insertar valores dentro de cadenas, mejorando la
+legibilidad del código y simplificando la manipulación de datos [2]. Por
+otro lado, las estructuras de control permiten dirigir el flujo de
+ejecución de un programa; las condicionales permiten tomar decisiones
+basadas en condiciones, mientras que los ciclos permiten repetir
+acciones múltiples veces, siendo fundamentales en la lógica de
+programación [1].
+
+Las estructuras de datos permiten organizar la información de manera
+eficiente; por ejemplo, las pilas operan bajo el principio LIFO, las
+colas bajo el principio FIFO y los diccionarios almacenan datos en pares
+clave-valor, facilitando el acceso rápido a la información [2].
+Asimismo, las funciones son bloques de código reutilizables que permiten
+estructurar programas de manera modular; estas pueden ser definidas por
+el usuario o ser funciones anónimas (lambda), útiles para operaciones
+simples y rápidas [2]. Finalmente, la implementación de menús en
+programas permite organizar la interacción con el usuario mediante
+diferentes opciones, combinando estructuras de control, ciclos y entrada
+de datos.
+
+Por otra parte, en los notebooks de Jupyter se utiliza Markdown para
+estructurar el contenido teórico, permitiendo combinar texto, código y
+elementos visuales en un mismo documento [4]. Entre las principales
+etiquetas se encuentran los encabezados, negritas, cursivas, listas,
+código en línea, bloques de código, citas, líneas horizontales, enlaces
+e imágenes, cuya función es mejorar la organización, claridad y
+presentación de la información.
+
+Referencias:
+[1] Python Software Foundation, Python Documentation, 2024.
+[2] J. Zelle, Python Programming: An Introduction to Computer Science,
+2017. [3] Python Software Foundation, math — Mathematical functions,
+2024. [4] Project Jupyter, Markdown for Jupyter Notebooks, 2023.
