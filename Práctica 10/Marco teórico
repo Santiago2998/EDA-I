@@ -1,0 +1,21 @@
+El problema de construcción de horarios sin traslapes se modela como un caso del problema de selección de actividades, el cual consiste en elegir un subconjunto de intervalos compatibles entre sí, de tal forma que no exista intersección temporal entre ellos  . Este tipo de problema pertenece al área de optimización combinatoria y requiere el uso de criterios formales para garantizar soluciones eficientes.
+
+Una de las estrategias más utilizadas para este tipo de problemas es el algoritmo voraz. Este enfoque se basa en realizar elecciones locales óptimas en cada paso, bajo el supuesto de que dichas decisiones conducen a una solución global óptima. Su aplicación es válida cuando el problema cumple propiedades como la subestructura óptima y la propiedad de elección voraz. En el problema de selección de actividades, se ha demostrado que ordenar los intervalos por su tiempo de finalización en orden ascendente permite obtener una solución óptima, ya que se maximiza la disponibilidad de espacio para seleccionar actividades posteriores [1].
+
+La construcción de la solución se lleva a cabo mediante un proceso incremental. Este consiste en recorrer el conjunto de elementos previamente ordenados y seleccionar aquellos que no generen conflicto con los ya incluidos. La condición de factibilidad se verifica comparando el tiempo de inicio de cada intervalo con el tiempo de finalización del último intervalo aceptado, lo que asegura que no existan traslapes en la solución parcial [2].
+
+En términos de implementación, las materias se representan mediante estructuras de datos que permiten almacenar múltiples atributos. En Python, es común utilizar listas y diccionarios para este propósito, ya que facilitan tanto la organización como la manipulación de la información. Además, el uso de funciones de ordenamiento con criterios definidos permite aplicar directamente la estrategia voraz sobre los datos [3].
+
+El análisis de complejidad indica que el algoritmo tiene un costo temporal dominado por el proceso de ordenamiento, con complejidad O(n log n). Posteriormente, la selección de actividades se realiza en tiempo lineal O(n), mediante un único recorrido de los datos. Por lo tanto, la complejidad total del algoritmo es O(n log n). En cuanto al espacio, este es proporcional al número de elementos almacenados [2].
+
+Aunque existen otros enfoques como la programación dinámica para resolver problemas de optimización, en este caso el algoritmo voraz resulta suficiente y más eficiente, debido a las características específicas del problema, lo que evidencia la importancia de elegir adecuadamente la estrategia de diseño de algoritmos [1].
+
+Referencias: 
+
+
+[1] J. García Molina, “Algoritmos voraces y selección de actividades,” Universidad de Murcia, [En línea]. Disponible: https://www.dsi.inf.um.es/~jmolina/eda/tema4.pdf [Accedido: 29-abr-2026].
+
+[2] Universidad de Granada, “Estrategias de diseño de algoritmos: método voraz,” [En línea]. Disponible: https://lsi.ugr.es/~jmantas/ppr/teoria/greedy.pdf [Accedido: 29-abr-2026].
+
+[3] Python Software Foundation, “Estructuras de datos,” [En línea]. Disponible: https://docs.python.org/es/3/tutorial/datastructures.html [Accedido: 29-abr-2026].
+
