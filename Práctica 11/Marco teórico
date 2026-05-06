@@ -1,0 +1,19 @@
+Un laberinto es una estructura formada por caminos y obstáculos que tiene como objetivo encontrar una ruta desde un punto inicial hasta una salida. En programación, los laberintos son utilizados para comprender y aplicar algoritmos de búsqueda, ya que permiten representar problemas donde se deben evaluar distintas posibilidades hasta encontrar una solución. Generalmente, los laberintos se representan mediante matrices, donde cada elemento indica si una posición puede recorrerse o si está bloqueada por una pared. Esta representación facilita el manejo de posiciones dentro del programa y permite recorrer el espacio de manera ordenada.  
+
+Para resolver este tipo de problemas se utiliza con frecuencia la recursividad. La recursividad es una técnica de programación en la que una función se llama a sí misma para resolver un problema dividiéndolo en partes más pequeñas. Este método resulta útil cuando un problema tiene una estructura repetitiva, como ocurre al recorrer diferentes caminos dentro de un laberinto. En cada llamada recursiva se analiza una nueva posición hasta llegar a un caso base, que puede representar el éxito al encontrar la salida o el fallo cuando el camino no es válido [1].
+
+Dentro de los algoritmos recursivos es importante definir correctamente los casos base. Estos evitan que la función se ejecute de manera infinita y permiten detener el proceso cuando se alcanza una condición específica. En el caso del laberinto, los casos base ocurren cuando la posición actual se encuentra fuera de los límites de la matriz, cuando se llega a una pared o a una posición previamente visitada, y cuando finalmente se alcanza la salida. A partir de estas condiciones, el algoritmo puede continuar explorando o regresar al paso anterior según sea necesario.  
+
+El método utilizado para encontrar la solución del laberinto se conoce como backtracking o retroceso. Esta técnica consiste en probar diferentes caminos posibles y, cuando uno no conduce a la solución, regresar al punto anterior para intentar otra alternativa. Gracias a esto, el algoritmo puede explorar distintas rutas hasta encontrar la correcta. El backtracking es ampliamente utilizado en problemas de búsqueda y optimización porque permite recorrer todas las posibilidades de forma organizada sin perder el seguimiento del camino recorrido [2].
+
+La exploración de un laberinto normalmente se realiza considerando movimientos en cuatro direcciones: arriba, abajo, izquierda y derecha. Cada movimiento representa un nuevo intento por avanzar hacia la salida. Cuando una posición es válida, se marca temporalmente como parte del camino para evitar recorrerla nuevamente y generar ciclos infinitos. Si ninguna dirección conduce a la solución, la posición se desmarca y el algoritmo retrocede. Este procedimiento permite construir el camino correcto paso a paso hasta llegar al objetivo.  
+
+Otro aspecto importante es el análisis de complejidad del algoritmo. En problemas recursivos con backtracking, el tiempo de ejecución depende de la cantidad de caminos posibles que deben explorarse. En el peor de los casos, el algoritmo puede revisar una gran cantidad de posiciones antes de encontrar la salida o determinar que no existe una solución. Además, la recursividad utiliza memoria adicional debido a las llamadas almacenadas en la pila de ejecución. Por ello, el análisis de complejidad ayuda a comprender el rendimiento y las limitaciones del algoritmo implementado [3].
+
+Referencias
+
+[1] GeeksforGeeks, “Recursion in Python,” GeeksforGeeks, 2025. [En línea]. Disponible en: https://www.geeksforgeeks.org/recursion-in-python/ [Consultado: 6-may-2026].
+
+[2] Programiz, “Backtracking Algorithm,” Programiz, 2025. [En línea]. Disponible en: https://www.programiz.com/dsa/backtracking-algorithm [Consultado: 6-may-2026].
+
+[3] IBM, “What is recursion?,” IBM, 2024. [En línea]. Disponible en: https://www.ibm.com/topics/recursion [Consultado: 6-may-2026].
