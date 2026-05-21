@@ -1,0 +1,21 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "e05a7e2e",
+   "metadata": {},
+   "source": [
+    "*Conclusión*\n",
+    "\n",
+    "Con base en los resultados obtenidos, se puede concluir un cumplimiento adecuado de los objetivos planteados ya que, mediante la implementación del algoritmo Merge Sort, fue posible ordenar las denominaciones de monedas de mayor a menor para facilitar el proceso de selección del cambio. Además, al aplicar una estrategia greedy implementada de forma recursiva, el programa logró seleccionar en cada paso la moneda de mayor valor posible sin exceder el monto restante, permitiendo devolver una cantidad exacta utilizando el menor número posible de monedas. Asimismo, se pudo observar la importancia de integrar diferentes estrategias algorítmicas para resolver un mismo problema de forma eficiente, además de analizar la complejidad temporal y espacial del programa, lo que permitió comprender mejor cómo elegir métodos adecuados al momento de desarrollar soluciones computacionales.\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "language_info": {
+   "name": "python"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
